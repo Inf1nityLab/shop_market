@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shop/feature/auth/presentation/screen/navigation_screen.dart';
 
 import '../bloc/auth_cubit.dart';
 import 'home_screen.dart';
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         if (state is AuthAuthenticated) {
           // Авторизован -> Идем на главный экран
           Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (_) => const HomeScreen()),
+            MaterialPageRoute(builder: (_) => const MainScreen()),
           );
         } else if (state is AuthUnauthenticated || state is AuthError) {
           // Не авторизован -> Идем на логин

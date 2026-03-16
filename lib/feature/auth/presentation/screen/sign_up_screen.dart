@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/feature/auth/presentation/screen/home_screen.dart';
+import 'package:shop/feature/auth/presentation/screen/navigation_screen.dart';
 
 import '../bloc/auth_cubit.dart';
 // Импорты ваших файлов
@@ -35,7 +36,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         listener: (context, state) {
           if (state is AuthAuthenticated) {
             Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(builder: (_) => const HomeScreen()),
+              MaterialPageRoute(builder: (_) => const MainScreen()),
                   (route) => false,
             );
           } else if (state is AuthError) {

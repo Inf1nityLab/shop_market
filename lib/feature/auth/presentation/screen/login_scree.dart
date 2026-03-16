@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/feature/auth/presentation/screen/home_screen.dart';
+import 'package:shop/feature/auth/presentation/screen/navigation_screen.dart';
 import 'package:shop/feature/auth/presentation/screen/sign_up_screen.dart';
 import '../bloc/auth_cubit.dart';
 
@@ -32,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
         listener: (context, state) {
           if (state is AuthAuthenticated) {
             Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(builder: (_) => const HomeScreen()),
+              MaterialPageRoute(builder: (_) => const MainScreen()),
                   (route) => false,
             );
             // Здесь можно добавить навигацию на Home Screen
