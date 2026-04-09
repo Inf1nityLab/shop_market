@@ -5,12 +5,6 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shop/feature/auth/presentation/bloc/auth_cubit.dart';
 import 'package:shop/feature/auth/presentation/bloc/cart_cubit.dart';
 import 'package:shop/feature/auth/presentation/bloc/home_cubit.dart';
-import 'package:shop/feature/auth/presentation/screen/category.dart';
-import 'package:shop/feature/auth/presentation/screen/login_scree.dart';
-import 'package:shop/feature/auth/presentation/screen/sign_up_screen.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shop/feature/auth/presentation/screen/splash_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

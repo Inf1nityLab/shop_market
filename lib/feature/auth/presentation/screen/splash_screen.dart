@@ -1,16 +1,13 @@
 
 
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shop/feature/auth/presentation/screen/navigation_screen.dart';
 
 import '../bloc/auth_cubit.dart';
 import 'home_screen.dart';
 import 'login_scree.dart';
-// import 'auth_cubit.dart';
-// import 'auth_state.dart';
-// import 'login_scree.dart';
-// import 'home_screen.dart'; // Подключите ваш экран
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -39,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
         } else if (state is AuthUnauthenticated || state is AuthError) {
           // Не авторизован -> Идем на логин
           Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (_) => const LoginScreen()),
+            MaterialPageRoute(builder: (_) =>  LoginScreen()),
           );
         }
       },
